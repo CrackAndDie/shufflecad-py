@@ -9,8 +9,8 @@ classifiers = [
 ]
 
 setup(
-    name='robocadSimPy',
-    version='0.0.0.1',
+    name='shufflecad-py',
+    version='0.0.0.3',
     description='python lib for shufflecad',
     long_description="Python library for Shufflecad" + '\n\n' + open('CHANGELOG.md').read(),
     url='https://github.com/Soft-V/shufflecad-4',
