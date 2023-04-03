@@ -1,6 +1,6 @@
-from shared import InfoHolder, CameraVariable
-from logger import Logger
-from connections import ConnectionHelper
+from .shared import InfoHolder, CameraVariable
+from .logger import Logger
+from .connections import ConnectionHelper
 import signal
 
 
@@ -11,6 +11,10 @@ class Shufflecad:
         signal.signal(signal.SIGTERM, cls.handler)
         signal.signal(signal.SIGINT, cls.handler)
         ConnectionHelper.init_and_start()
+
+    @classmethod
+    def stop(cls):
+        ConnectionHelper.stop()
 
     @classmethod
     def add_var(cls, var):

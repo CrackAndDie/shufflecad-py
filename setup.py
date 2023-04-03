@@ -10,7 +10,7 @@ classifiers = [
 
 setup(
     name='shufflecad-py',
-    version='0.0.0.3',
+    version='0.0.0.6',
     description='python lib for shufflecad',
     long_description="Python library for Shufflecad" + '\n\n' + open('CHANGELOG.md').read(),
     url='https://github.com/Soft-V/shufflecad-4',
@@ -20,5 +20,5 @@ setup(
     classifiers=classifiers,
     keywords=['simulator', 'robotics', 'robot', '3d', 'raspberry', 'control'],
     packages=find_packages(),
-    install_requires=['numpy', 'funcad', 'opencv-python']
+    install_requires=['numpy', 'funcad']
 )

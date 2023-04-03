@@ -6,7 +6,7 @@ import struct
 import time
 from threading import Thread
 
-from shared import ShuffleVariable, InfoHolder
+from .shared import ShuffleVariable, InfoHolder
 
 
 class ListenPort:
@@ -270,14 +270,13 @@ class ConnectionHelper:
 
     @classmethod
     def on_rpi_vars(cls):
-        if InfoHolder.on_real_robot:
-            out_lst = [InfoHolder.temperature, InfoHolder.memory_load,
-                       InfoHolder.cpu_load, InfoHolder.power, InfoHolder.spi_time_dev,
-                       InfoHolder.rx_spi_time_dev, InfoHolder.tx_spi_time_dev,
-                       InfoHolder.spi_count_dev]
-            cls.rpi_variables_channel.out_string = "&".join(out_lst)
-        else:
-            cls.rpi_variables_channel.out_string = ""
+        out_lst = [InfoHolder.temperature, InfoHolder.memory_load,
+                   InfoHolder.cpu_load, InfoHolder.power, InfoHolder.spi_time_dev,
+                   InfoHolder.rx_spi_time_dev, InfoHolder.tx_spi_time_dev,
+                   InfoHolder.spi_count_dev, InfoHolder.com_time_dev,
+                   InfoHolder.rx_com_time_dev, InfoHolder.tx_com_time_dev,
+                   InfoHolder.com_count_dev]
+        cls.rpi_variables_channel.out_string = "&".join(out_lst)
 
     __camera_toggler = 0
 

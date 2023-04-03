@@ -1,6 +1,6 @@
 import logging
 from datetime import datetime
-from shared import InfoHolder
+from .shared import InfoHolder
 
 
 class Logger:
